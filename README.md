@@ -7,7 +7,7 @@ We need some uses permission to access background location, So please follow the
       startMoveKit();        
     }
  
- private void startMoveKit() {
+    private void startMoveKit() {
  
         MoveKit.initialize(this, "83cffa2e7b8a8ebe1ad3fd1641ddb0c3");
         
