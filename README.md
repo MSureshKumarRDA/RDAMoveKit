@@ -3,6 +3,17 @@ Track user location in background
 Download this movekit.aar library and setup with your project
 We need some uses permission to access background location, So please follow the below code
 
+Add below Dependencies in app level build gradle
+
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    
+    
+Add below code in your activity
+
     if (PermissionUtils.requestPermissionForLocationAccess(this)) {     
       startMoveKit();        
     }
