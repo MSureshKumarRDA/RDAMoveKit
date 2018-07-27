@@ -23,6 +23,8 @@ We need some uses permission to access background location, So please follow the
             }
           });
         }
+        
+        "83cffa2e7b8a8ebe1ad3fd1641ddb0c3" -> This is company registeration token. You can register in http://www.rudram.co/ 
     
  Add below code in onActivityResult()   
  
