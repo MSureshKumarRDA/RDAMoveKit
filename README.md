@@ -5,7 +5,6 @@ We need some uses permission to access background location, So please follow the
 
 Add below Dependencies in app level build gradle
 
-    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
     implementation 'com.google.android.gms:play-services-location:15.0.1'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.google.code.gson:gson:2.8.2'
@@ -49,11 +48,10 @@ Add below code in your activity
             Map<String, Integer> map = new HashMap<>();
             map.put(android.Manifest.permission.ACCESS_FINE_LOCATION, PackageManager.PERMISSION_GRANTED);
             map.put(android.Manifest.permission.ACCESS_COARSE_LOCATION, PackageManager.PERMISSION_GRANTED);
-            map.put(android.Manifest.permission.READ_PHONE_STATE, PackageManager.PERMISSION_GRANTED);
                 for (int i = 0; i < grantResults.length; i++) {
                     map.put(permissions[i], grantResults[i]);
                 }
-                if ((map.get(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) &&     (map.get(android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) && (map.get(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED)) {
+                if ((map.get(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) &&     (map.get(android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)) {
                 startMoveKit();
                 } else {
                 Toast.makeText(getApplicationContext(), "Sorry! you cannot access due to lack of permission", Toast.LENGTH_SHORT).show();
